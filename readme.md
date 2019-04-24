@@ -6,7 +6,7 @@
 
 示例：(下载到本地后执行这段操作即可看到现象)
 
-![](C:\Users\17112\Desktop\oo_mutual\test++\image.png)
+![Image text]image.png
 
 测试自己的程序：
 

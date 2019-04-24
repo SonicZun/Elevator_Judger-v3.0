@@ -1,0 +1,77 @@
+A is waiting 
+C is waiting 
+B is waiting 
+wait over B
+wait over C
+wait over A
+A is waiting 
+wait over A
+B is waiting 
+1 haven't arrived, need transition
+wait over B
+C is waiting 
+wait over C
+2 haven't arrived, need transition
+A is waiting 
+wait over A
+A is waiting 
+C is waiting 
+wait over C
+wait over A
+A is waiting 
+wait over A
+A is waiting 
+B is waiting 
+C is waiting 
+wait over C
+C is waiting 
+wait over B
+wait over A
+wait over C
+C is waiting 
+A is waiting 
+wait over A
+wait over C
+C is waiting 
+wait over C
+C is waiting 
+B is waiting 
+11 haven't arrived, need transition
+wait over B
+wait over C
+12 haven't arrived, need transition
+B is waiting 
+wait over B
+A is waiting 
+B is waiting 
+wait over B
+wait over A
+15 haven't arrived, need transition
+A is waiting 
+wait over A
+A is waiting 
+C is waiting 
+18 haven't arrived, need transition
+wait over C
+wait over A
+A is waiting 
+18 haven't arrived, need transition
+wait over A
+C is waiting 
+22 haven't arrived, need transition
+wait over C
+24 haven't arrived, need transition
+C is waiting 
+25 haven't arrived, need transition
+wait over C
+21 haven't arrived, need transition
+21 haven't arrived, need transition
+B is waiting 
+A is waiting 
+27 haven't arrived, need transition
+wait over A
+A is waiting 
+wait over B
+C is waiting 
+wait over C
+wait over A

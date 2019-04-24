@@ -6,7 +6,7 @@
 
 示例：(下载到本地后执行这段操作即可看到现象)
 
-![1556120656286](C:\Users\17112\AppData\Roaming\Typora\typora-user-images\1556120656286.png)
+![](C:\Users\17112\Desktop\oo_mutual\test++\image.png)
 
 测试自己的程序：
 

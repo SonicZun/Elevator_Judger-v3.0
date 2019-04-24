@@ -6,7 +6,7 @@
 
 示例：(下载到本地后执行这段操作即可看到现象)
 
-![Image text]https://github.com/Sonicsss/Elevator_Judger-v3.0/blob/master/image.png
+![Image text](https://github.com/Sonicsss/Elevator_Judger-v3.0/blob/master/image.png)
 
 测试自己的程序：
 

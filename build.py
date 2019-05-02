@@ -2,16 +2,24 @@
 """
 Created on Mon Apr 22 19:10:45 2019
 
-@author: 17112
+@author: Sonic
 """
 
 import os
 import re
-
+import sys
 
 suffix = ".+\.java"
 print("the project is being builded...\n")
 print("The current directory : " + os.getcwd() + "\n")
+
+def clear():
+    classList = os.listdir(os.getcwd() + "\\bin\\")
+    for class_ in classList:
+        if re.match(".+\.class", class_):
+            path = os.getcwd() + "\\bin\\" + class_
+            print("Delete: " + path)
+            os.remove(path)
 
 def findPattern(path, pattern):
     fp = open(path, "r")
@@ -61,7 +69,7 @@ def getLib(system):
     return jars[1:]
             
 def writeMANIFEST():
-    mf = open("bin\MANIFEST.MF", "w")
+    mf = open("MANIFEST.MF", "w")
     mf.write("Manifest-Version: 1.0\n")
     mf.write("Main-Class: " + findMain() + "\n")
     pathLib = os.getcwd() + "\\lib\\"
@@ -72,17 +80,31 @@ def writeMANIFEST():
     jars = jars + " bin"
     mf.write(jars + "\n")
     mf.write("\n")
-    mf.close()          
-    
+    mf.close()      
 
+def rmrf(path):
+    if (os.path.exists(path)):
+       for root, dirs, files in os.walk(path, topdown=False):
+           for name in files:
+               os.remove(os.path.join(root, name))
+           for name in dirs:
+               os.rmdir(os.path.join(root, name))
+       os.rmdir(path)
+
+
+rmrf(os.getcwd() + "\\path")
+rmrf(os.getcwd() + "\\bin")
+os.mkdir(os.getcwd() + "\\bin")
+os.mkdir(os.getcwd() + "\\path")
 register(os.getcwd() + "\\src\\", "path\\srclist.txt", ".+\.java")
 jars = getLib("Windows")
 #print("jars : " + jars)
 writeMANIFEST()
-cmd = "@javac -encoding UTF-8 -cp " + jars + " @path\\srclist.txt -d bin" + " & " + "@jar -cvfm testee.jar bin\MANIFEST.MF -C bin\ ."
+cmd = "@javac -encoding UTF-8 -cp " + jars + " @path\\srclist.txt -d bin" + " & " + "@jar -cvfm {}.jar MANIFEST.MF -C bin/ .".format(sys.argv[1])
 os.system(cmd)
-
-
+rmrf(os.getcwd() + "\\path")
+rmrf(os.getcwd() + "\\bin")
+os.remove(os.getcwd() + "\\MANIFEST.MF")
 
 
 
